@@ -1,0 +1,34 @@
+{
+  "id": "open-flashcards-style-001",
+  "title": "Author card-writing & sourcing style guide v1",
+  "project": "open-flashcards",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "spaced-repetition"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The public Anki deck ecosystem is undermined by decks of unknown provenance and unverified accuracy, and by inconsistent card-writing quality. Before any deck is authored at scale, open-flashcards needs a single, versioned style guide so that cards produced by many parallel AI sessions are atomic, unambiguous, accessible, accuracy-reviewable, and sourced only from openly-licensed material with per-card attribution.",
+  "objective": "Write and publish version 1 of the card-writing and sourcing style guide that all deck/batch tasks will follow.",
+  "acceptanceCriteria": [
+    "Defines the atomicity / minimum-information principle (one fact per card; exactly one defensible answer) and prompt-disambiguation guidance.",
+    "Specifies cloze conventions and restricts decks to standard note types (Basic, Basic-and-reversed, Cloze) for cross-app portability; forbids custom note types and baked-in scheduler state.",
+    "Mandates per-card sourcing and attribution ('source-or-it-doesn't-ship'): how to record source URL, SPDX-style license id, and attribution, and the categorical exclusion of existing third-party decks as sources.",
+    "Includes accessibility conventions (semantic HTML, image alt-text, no color-only cues) and i18n/UTF-8 conventions.",
+    "Includes a high-stakes and civic section: 'study aid, not advice' framing, credentialed-expert escalation for medical/legal/financial/safety/exam content, non-partisan rule for civic content, and a ban on copying proprietary question banks.",
+    "Published, versioned, and licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\open-flashcards\\PLAN.md",
+    "C:\\code\\elyos\\docs\\good-deed-definition.md",
+    "Anki manual (note/card model, note types, GUIDs, .apkg package format)",
+    "Creative Commons license suite (CC0, CC-BY, CC-BY-SA) and SPDX license identifiers"
+  ],
+  "output": "A versioned style-guide document (style-guide/card-writing-style-guide.md), CC-BY-4.0, covering atomicity, cloze and note-type conventions, sourcing & attribution, accessibility & i18n, and high-stakes/civic handling.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "CC-BY-4.0"
+}
