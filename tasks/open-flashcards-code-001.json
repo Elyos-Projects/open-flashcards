@@ -1,0 +1,33 @@
+{
+  "id": "open-flashcards-code-001",
+  "title": "Deterministic CrowdAnki JSON → .apkg build tool",
+  "project": "open-flashcards",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-source"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Anki decks are distributed as .apkg files, but the source of truth for open-flashcards is CrowdAnki JSON stored in version control. A reproducible build tool is needed to convert JSON → .apkg deterministically so that the same source always produces the same binary, enabling verification, CI, and non-destructive updates. This is the core infrastructure that unblocks all deck publishing.",
+  "objective": "Build a CLI tool that converts CrowdAnki-aligned JSON (per the data-001 schema) to a valid .apkg file deterministically, with no baked-in scheduling state.",
+  "acceptanceCriteria": [
+    "Reads CrowdAnki JSON from the decks/ directory and produces a valid .apkg file using genanki or equivalent.",
+    "Build is deterministic: identical input JSON always produces an identical .apkg (same byte hash).",
+    "Preserves GUIDs exactly as specified in the JSON; does not generate new GUIDs or modify existing ones.",
+    "Strips any scheduling state (due dates, review history) from the output .apkg so it is scheduler-agnostic.",
+    "Validates the input JSON against the data-001 schema before building; exits non-zero with a clear error if validation fails.",
+    "Includes a README explaining usage and a minimal test suite; licensed MIT."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/kerrickstaley/genanki (genanki library for .apkg generation)",
+    "CrowdAnki JSON format documentation (https://github.com/Stvad/CrowdAnki)"
+  ],
+  "output": "A merged PR adding a build tool (tools/build-apkg/) that converts CrowdAnki JSON to .apkg, with tests and README, licensed MIT.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "MIT"
+}

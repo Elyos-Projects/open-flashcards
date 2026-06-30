@@ -1,0 +1,33 @@
+{
+  "id": "open-flashcards-doc-002",
+  "title": "Accessibility audit + guide for card templates",
+  "project": "open-flashcards",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "open-education-resources", "accessibility", "spaced-repetition"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Flashcard accessibility is often an afterthought: color-only cues exclude colorblind learners, missing alt-text on images excludes screen-reader users, and poorly structured HTML can break in assistive technologies. The style guide v1 includes baseline accessibility conventions, but a dedicated audit and guide provides deeper coverage aligned with a11y-alttext-commons conventions and ensures card templates are genuinely accessible to all learners.",
+  "objective": "Audit the existing card templates and style guide for accessibility gaps and produce a comprehensive accessibility guide for card template authors.",
+  "acceptanceCriteria": [
+    "Audits the card-writing style guide v1 and any existing card templates for accessibility gaps (color-only cues, missing alt-text, non-semantic HTML, keyboard navigation, screen-reader compatibility).",
+    "Produces a guide covering: alt-text writing best practices for flashcard images, semantic HTML requirements for card fields, color contrast requirements, and keyboard/screen-reader compatibility.",
+    "Aligns with a11y-alttext-commons conventions (or equivalent recognized accessibility standard).",
+    "Includes concrete examples of compliant and non-compliant card HTML for each rule.",
+    "Recommends updates to the card-writing style guide v1 and the code-002 linter to enforce any new rules.",
+    "Published, versioned, licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-style-001.json",
+    "https://www.w3.org/WAI/WCAG21/quickref/ (WCAG 2.1 quick reference)"
+  ],
+  "output": "A versioned accessibility audit and guide document (docs/accessibility-guide.md) with per-rule examples and style guide update recommendations, CC-BY-4.0.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-research-001",
+  "title": "Secure ≥1 publishing channel + ≥1 validating educator; validate AnkiWeb policy",
+  "project": "open-flashcards",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "spaced-repetition"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The open-flashcards project cannot publish decks until at least one distribution channel is confirmed and at least one validating educator is identified. Without a confirmed channel, all deck authoring work may be wasted. AnkiWeb is a primary candidate but its policy on automated or attributed community uploads must be verified. A time-boxed search with explicit kill/pivot criteria prevents indefinite blocking.",
+  "objective": "Research and confirm ≥1 publishing channel willing to accept clean-provenance, openly-licensed, attributed decks; validate AnkiWeb policy; identify ≥1 educator/learner who will serve as the first subject's accuracy validator; document kill/pivot criteria.",
+  "acceptanceCriteria": [
+    "Evaluates candidate channels in priority order (GitHub release → AnkiWeb → OER/CrowdAnki partner) with each channel's acceptance posture, applying the PLAN.md decision tree.",
+    "Confirms ≥1 channel will accept clean-provenance, openly-licensed, attributed decks, and validates AnkiWeb shared-deck policy / account terms if AnkiWeb is chosen.",
+    "Identifies ≥1 validating educator/learner who confirms the first subject is genuinely needed and will check accuracy.",
+    "Records the channel's required deck metadata, license display requirements, and any rate/automation limits.",
+    "States the time-box and kill/pivot criteria; on success, flips verifiedNeed=true for tasks targeting that channel/subject.",
+    "Published as a versioned document, CC-BY-4.0."
+  ],
+  "resources": [
+    "https://ankiweb.net/shared/info/ (AnkiWeb shared decks policy)",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md"
+  ],
+  "output": "A research report (docs/channel-partner-research.md) documenting evaluated channels, confirmed channel(s), educator contacts, policy validation outcomes, and kill/pivot criteria.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "CC-BY-4.0"
+}

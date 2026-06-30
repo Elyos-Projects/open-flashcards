@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-code-005",
+  "title": "Outcome-tracking dashboard (published/installable + adoption per deck)",
+  "project": "open-flashcards",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-source"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Elyos measures success as outcomes delivered to beneficiaries. For open-flashcards, the sustainability metric is adoption: how many learners are installing and using the published decks. An outcome-tracking dashboard aggregates per-deck publication status, install counts, ratings, and quality metrics (from data-002) into a single view that maintainers can use to guide prioritization.",
+  "objective": "Build an outcome-tracking dashboard that aggregates per-deck publication status, adoption metrics (installs/ratings), and quality metrics into a single, maintainer-readable view.",
+  "acceptanceCriteria": [
+    "Aggregates per-deck data: publication status, channel URL, install count / rating (where available from channel API), and quality metrics from the data-002 dataset.",
+    "Generates a dashboard view (static HTML or Markdown table) updated automatically on each release or on a schedule.",
+    "Includes a per-deck trend for reviewer-corrected rate and error-taxonomy mix over time.",
+    "Dashboard is hosted on the repository (e.g., GitHub Pages or output/ directory) with no external service dependency.",
+    "Does not log or expose any credentials or API keys; reads public channel APIs only.",
+    "Licensed MIT."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-data-002.json"
+  ],
+  "output": "A merged PR adding an outcome-tracking dashboard tool (tools/dashboard/) that generates a static dashboard from published metrics, with a CI workflow to update it on release; licensed MIT.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

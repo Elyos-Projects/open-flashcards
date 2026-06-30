@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-research-003",
+  "title": "Standards/curriculum mapping + coverage measurement for the subject",
+  "project": "open-flashcards",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "open-education-resources", "spaced-repetition"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After batch-001 publishes the first set of decks, it is important to measure whether the deck set provides meaningful curriculum coverage relative to a recognized standard. Without a standards mapping, it is impossible to know what fraction of the target curriculum the decks cover, or where the gaps are. A reproducible coverage measurement method enables tracking progress over time.",
+  "objective": "Map the chosen subject's deck set to a recognized open curriculum standard and measure coverage (cards covered / total in-scope learning objectives), using a reproducible method.",
+  "acceptanceCriteria": [
+    "Identifies a publicly available, recognized curriculum standard or syllabus for the chosen subject (name, version, URL, access date).",
+    "Maps each published deck's cards to the standard's learning objectives or topic list.",
+    "Measures coverage as (cards covering an objective / total in-scope objectives) with a clear denominator and methodology.",
+    "Identifies coverage gaps and suggests which topics to prioritize in future batch tasks.",
+    "Documents the methodology reproducibly so coverage can be re-measured after each batch run.",
+    "Published as a versioned document, CC-BY-4.0."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-batch-001.json"
+  ],
+  "output": "A versioned curriculum-mapping and coverage-measurement report (docs/curriculum-coverage.md) for the chosen subject, with methodology, coverage delta, and gap analysis, CC-BY-4.0.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

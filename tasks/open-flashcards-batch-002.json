@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-batch-002",
+  "title": "Build a coherent single-subject deck set (≥6 decks / ≥1,500 cards)",
+  "project": "open-flashcards",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The M2 milestone proves that the pipeline scales to a coherent, curriculum-covering subject set—the depth required for a learner to meaningfully use the decks for study. A single subject with at least 6 decks and 1,500 cards is the minimum to demonstrate curriculum coverage, trigger educator validation, and generate meaningful adoption metrics. All high-stakes cards (if any) require expert sign-off.",
+  "objective": "Build, accuracy-review, and publish at least 6 decks with at least 1,500 total cards covering one coherent curriculum subject, with zero license/provenance violations and zero known factual errors.",
+  "acceptanceCriteria": [
+    "At least 6 decks with at least 1,500 total cards published and installable in one coherent subject.",
+    "Zero license/provenance violations; zero known factual errors after human accuracy review.",
+    "All high-stakes cards (medical, legal, financial, safety, exam) expert-signed and carrying 'study aid, not advice' framing; civic content non-partisan.",
+    "All cards carry full per-card attribution; all decks build deterministically and update non-destructively.",
+    "Reviewer-corrected rate and error-taxonomy mix measured and recorded for the full subject set.",
+    "PR includes all deck JSON files, accuracy-review records, and a subject-completion report."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-batch-001.json"
+  ],
+  "output": "A merged PR containing at least 6 CrowdAnki JSON deck files (1,500+ cards) in decks/ covering one coherent subject, published via the full pipeline, with accuracy-review records and a subject-completion report.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "open-flashcards-code-002",
+  "title": "Deck linter/validator + CI gate (schema, cloze, GUIDs, attribution, HTML, note types)",
+  "project": "open-flashcards",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-source"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Manual card authoring at scale is error-prone. A comprehensive linter/validator running as a CI gate prevents malformed decks, broken cloze syntax, missing attributions, duplicate GUIDs, and unsafe HTML from ever reaching the publishing pipeline. This is the quality enforcement layer that makes the pipeline repeatable and trustworthy.",
+  "objective": "Build a deck linter/validator tool and wire it as a CI gate so that every deck PR is automatically validated before it can be merged.",
+  "acceptanceCriteria": [
+    "Validates CrowdAnki JSON against the data-001 data model schema; rejects empty required fields and non-standard note types.",
+    "Detects broken cloze syntax (e.g., unmatched {{c1:: tags), duplicate or missing GUIDs, missing attribution fields, and unsafe or malformed HTML.",
+    "Flags missing image alt-text as a warning (accessible content requirement from the style guide).",
+    "Runs as a CI gate: a deck PR cannot merge unless validation passes; emits an auditable report with no secrets in logs.",
+    "Returns a non-zero exit code with a human-readable, line-level error report on failure.",
+    "Includes unit tests covering at least the schema, cloze, GUID, and attribution checks; licensed MIT."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-data-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-code-001.json"
+  ],
+  "output": "A merged PR adding a deck linter CLI (tools/lint-deck/) and a CI workflow (.github/workflows/lint-decks.yml) that gates deck PRs; licensed MIT.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "MIT"
+}

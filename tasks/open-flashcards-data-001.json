@@ -1,0 +1,33 @@
+{
+  "id": "open-flashcards-data-001",
+  "title": "Define CrowdAnki-aligned card/deck data model + provenance/attribution + GUID rules",
+  "project": "open-flashcards",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "All deck authoring, build tooling, and CI gates depend on a well-defined, stable data model. CrowdAnki JSON is the interchange format, but it needs explicit extensions for per-card provenance, attribution, SPDX license fields, and deterministic GUID derivation rules. This model is the contract between card authors, build tooling, linters, and the publishing pipeline.",
+  "objective": "Define and publish the CrowdAnki-aligned card/deck data model schema, including required provenance and attribution fields, SPDX license fields, and deterministic GUID derivation rules.",
+  "acceptanceCriteria": [
+    "Defines the JSON schema for the deck and card data model, compatible with CrowdAnki's format.",
+    "Specifies required per-card fields: source URL, SPDX-style license identifier, attribution string, and retrieval/authoring date.",
+    "Defines deterministic GUID derivation rules (e.g., from deck id + note type + stable key) that are collision-free and stable across updates.",
+    "Specifies which CrowdAnki fields are required, optional, or forbidden (e.g., no baked-in scheduling state).",
+    "Documents the allowed note types (Basic, Basic-and-reversed, Cloze) and their field structure.",
+    "Schema is versioned and published as a JSON Schema file with accompanying documentation, CC-BY-4.0."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-style-001.json",
+    "CrowdAnki JSON format documentation (https://github.com/Stvad/CrowdAnki)"
+  ],
+  "output": "A versioned JSON Schema file (schema/card-model.schema.json) and accompanying documentation (docs/data-model.md) defining the card/deck data model, provenance fields, and GUID rules, CC-BY-4.0.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "CC-BY-4.0"
+}

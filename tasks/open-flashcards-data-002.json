@@ -1,0 +1,33 @@
+{
+  "id": "open-flashcards-data-002",
+  "title": "Quality + adoption metrics: rubric scores, reviewer-corrected rate, error mix, installs/ratings",
+  "project": "open-flashcards",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "To evaluate whether the open-flashcards pipeline is producing high-quality, widely-used content, structured quality and adoption metrics must be collected and tracked. Rubric scores and reviewer-corrected rates measure pipeline quality; install counts and ratings (where available) measure learner adoption. This dataset is the sustainability metric for the project.",
+  "objective": "Collect, structure, and publish quality and adoption metrics for the published deck set, including per-deck rubric scores, reviewer-corrected rates, error-taxonomy mix, and available install/rating data.",
+  "acceptanceCriteria": [
+    "Collects per-deck accuracy rubric scores (4-dimension averages) and reviewer-corrected rate (cards changed / cards reviewed) for all published decks.",
+    "Collects error-taxonomy mix (counts per error category per deck) from reviewer records.",
+    "Collects available adoption data (install counts, ratings, or download stats) from the publishing channel(s).",
+    "Structures metrics as a versioned JSON or CSV dataset in metrics/ with a documented schema.",
+    "Includes a summary table (metrics/summary.md) showing trends across the batch-001 deck set.",
+    "Dataset licensed CC0-1.0 (metrics are facts, not creative works)."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-batch-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-doc-001.json"
+  ],
+  "output": "A versioned metrics dataset (metrics/quality-adoption.json or .csv) with schema documentation and a summary table (metrics/summary.md), licensed CC0-1.0.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC0-1.0"
+}
