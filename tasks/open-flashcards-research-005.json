@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-research-005",
+  "title": "High-stakes / exam-prep deck pathway (expert sign-off + \"not advice\")",
+  "project": "open-flashcards",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "open-education-resources", "spaced-repetition"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Certain high-value deck subjects (medical licensing, bar exam, CPA, safety certifications) carry significant risk if cards contain errors: learners may make high-stakes decisions based on memorized incorrect information. Before any such deck is authored, the project needs a documented pathway covering credentialed-expert sign-off requirements, 'study aid, not advice' framing requirements, official open syllabus restrictions, and an escalation checklist. This pathway must be defined before any high-stakes deck work begins.",
+  "objective": "Define the high-stakes and exam-prep deck pathway, including credentialed-expert sign-off requirements, 'study aid, not advice' framing, official open syllabus restrictions, and the escalation and review checklist.",
+  "acceptanceCriteria": [
+    "Defines which subject categories qualify as high-stakes (medical, legal, financial, safety, licensed-exam) and why.",
+    "Specifies the credentialed-expert sign-off requirements: who qualifies as an expert, how sign-off is documented, and where it is recorded in the deck JSON.",
+    "Mandates 'study aid, not advice' framing and specifies the exact disclaimer language to include in high-stakes decks.",
+    "Restricts high-stakes decks to official open syllabi only; specifies what counts as an official open syllabus.",
+    "Includes an escalation and review checklist that reviewers use before a high-stakes deck PR can be merged.",
+    "Published, versioned, licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-style-001.json"
+  ],
+  "output": "A versioned high-stakes deck pathway document (docs/high-stakes-pathway.md) covering expert sign-off, framing requirements, syllabus restrictions, and the escalation checklist, CC-BY-4.0.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "CC-BY-4.0"
+}

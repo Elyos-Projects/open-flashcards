@@ -1,0 +1,36 @@
+{
+  "id": "open-flashcards-deck-001",
+  "title": "Author cold-start deck (~50 cards) from one open/PD source (≥2 note types, ≥1 open-media card)",
+  "project": "open-flashcards",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The first deck proves that the open-flashcards pipeline works end-to-end: from an open/PD source through card authoring, style-guide compliance, accuracy review, and deterministic build to an installable .apkg. It must exercise at least two note types and include at least one openly-licensed image card to validate the media pipeline. The subject must be low-risk to avoid the high-stakes expert-review gate at this stage.",
+  "objective": "Author approximately 50 flashcards from one clearly open/PD source, covering a low-risk subject, using at least 2 note types and at least 1 openly-licensed image card, all conforming to the style guide v1 and data-001 schema.",
+  "acceptanceCriteria": [
+    "All cards sourced from one clearly open/PD source; per-card source URL, SPDX license identifier, and attribution string recorded in the JSON.",
+    "No content from third-party Anki decks or copyrighted sources; no proprietary question bank content.",
+    "Low-risk subject chosen (not medical, legal, financial, safety, or high-stakes exam content).",
+    "Exercises at least 2 note types (e.g., Basic and Cloze) and includes at least 1 card with an openly-licensed image; image license and attribution recorded separately.",
+    "Every card conforms to the card-writing style guide v1: atomic, unambiguous, accessible HTML, no color-only cues, image alt-text present.",
+    "Every card has a stable, deterministic GUID per the data-001 GUID rules.",
+    "Every card scored on the 4-dimension accuracy rubric against the source; nothing below 3/4 on any dimension is included.",
+    "Output is valid CrowdAnki JSON in decks/; output license is compatible with the source."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-style-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-data-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-research-002.json"
+  ],
+  "output": "A CrowdAnki JSON deck file in decks/ (~50 cards, ≥2 note types, ≥1 image card), with full per-card provenance/attribution, accuracy-reviewed and ready for the build tool.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

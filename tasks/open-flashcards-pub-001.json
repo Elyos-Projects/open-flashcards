@@ -1,0 +1,34 @@
+{
+  "id": "open-flashcards-pub-001",
+  "title": "Build, publish, confirm installable + measure coverage baseline",
+  "project": "open-flashcards",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "spaced-repetition"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the cold-start deck is authored and the build tool is working, the first end-to-end publication proves the full pipeline: CrowdAnki JSON → .apkg build → publishing channel → installable in Anki and AnkiDroid → coverage baseline measured. This is the M0 capstone that validates all prior work and establishes the baseline metric for measuring curriculum coverage improvement.",
+  "objective": "Build the cold-start deck to .apkg, publish to the confirmed channel with proper attribution, confirm it is installable in Anki and AnkiDroid, and measure the curriculum-coverage baseline for the chosen subject.",
+  "acceptanceCriteria": [
+    "Deck builds deterministically to .apkg using the code-001 build tool; same input JSON produces same .apkg hash.",
+    "Deck is confirmed installable in both Anki (desktop) and AnkiDroid with cards rendering correctly, including images.",
+    "Deck published to the confirmed channel (from research-001) with full license, attribution, and changelog; source JSON committed to the repository; semver assigned.",
+    "Curriculum-coverage baseline measured for the chosen subject using a reproducible method (named standard, snapshot date, in-scope denominator, cards covered / total).",
+    "No SM-2/FSRS scheduling state baked in; deck is scheduler-agnostic.",
+    "PR includes build output, publication confirmation (link or screenshot), and coverage baseline report."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-code-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-deck-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-research-001.json"
+  ],
+  "output": "A merged PR containing: published .apkg artifact, publication confirmation, source JSON committed, semver tag, and a coverage-baseline report (docs/coverage-baseline.md).",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "open-flashcards-batch-001",
+  "title": "Author + publish ≥3 decks (~300+ cards) via the repeatable pipeline",
+  "project": "open-flashcards",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "With the M0 cold-start proven and the M1 pipeline (linter, license gate, GUID tooling, publishing adapter, reviewer workflow) operational, the first repeatable batch run validates that the full pipeline scales beyond a single deck. At least 3 decks (~300+ cards) must pass through the entire pipeline—license gate, linter/CI, human accuracy review, and publishing adapter—to confirm the workflow is genuinely repeatable and to measure reviewer-corrected rate and error-taxonomy mix.",
+  "objective": "Author and publish at least 3 decks (~300+ cards total) using the full M1 pipeline: license gate, deck linter/CI, human accuracy review per the doc-001 rubric, and publishing adapter.",
+  "acceptanceCriteria": [
+    "At least 3 decks with ~300+ total cards published via license gate, linter/CI, human accuracy review, and publishing adapter.",
+    "Each deck passes all CI gates (schema, cloze, GUIDs, attribution, HTML, license) with no overrides.",
+    "Every card accuracy-reviewed using the 4-dimension rubric; reviewer-corrected rate and error-taxonomy mix recorded per deck.",
+    "Medium-risk subjects (if any) domain-reviewed by a relevant subject-matter expert.",
+    "All decks carry full attribution; all build deterministically and update non-destructively.",
+    "PR includes the deck JSON files, accuracy-review records, and a batch-run summary report."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-code-002.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-code-003.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-adapter-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-doc-001.json"
+  ],
+  "output": "A merged PR containing at least 3 CrowdAnki JSON deck files (~300+ cards) in decks/, published via the full M1 pipeline, with accuracy-review records and a batch-run summary report.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "open-flashcards-deck-audio-001",
+  "title": "Openly-licensed pronunciation audio for language decks",
+  "project": "open-flashcards",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-data", "language-learning"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Pronunciation is a critical component of language learning decks, but sourcing openly-licensed audio files is non-trivial. Existing pronunciation audio databases (e.g., Forvo, Wiktionary audio) have varying license terms that must be individually verified. This task is a sibling-project candidate with open-pronunciation-audio and should not duplicate that effort if it proceeds.",
+  "objective": "Source, verify licenses for, and integrate openly-licensed pronunciation audio clips into language learning decks, with per-clip attribution and license verification.",
+  "acceptanceCriteria": [
+    "Identifies openly-licensed audio sources (e.g., Wiktionary audio under CC-BY-SA, Forvo under CC-BY-NC or CC-BY where applicable) and verifies license terms per clip.",
+    "Produces a curated dataset of openly-licensed pronunciation audio clips with per-clip SPDX license identifier, source URL, attribution, and retrieval date.",
+    "Audio clips integrated into at least one language deck via the data-001 schema's media fields, with alt-text or transcript for accessibility.",
+    "All audio clips pass the license-verification gate (research-002 / code-003 rules applied to audio).",
+    "Dataset structured as a reusable collection in media/audio/ so other decks can reference the same files without duplication.",
+    "Dataset licensed under the most permissive license compatible with all included clip licenses."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://commons.wikimedia.org/wiki/Commons:Audio (Wikimedia Commons audio)",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-research-002.json"
+  ],
+  "output": "A curated dataset of openly-licensed pronunciation audio clips (media/audio/) with attribution metadata and integration into at least one language deck CrowdAnki JSON file.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-SA-4.0"
+}

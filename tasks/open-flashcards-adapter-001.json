@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-adapter-001",
+  "title": "Publishing adapter (AnkiWeb and/or GitHub release automation)",
+  "project": "open-flashcards",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-source"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Once a deck passes all CI gates (lint, license, accuracy review), publishing it to the confirmed channel should be automated to ensure consistency of metadata, attribution, and versioning. The publishing adapter implements the channel-specific upload logic discovered in research-001, enabling repeatable, auditable deck releases without manual steps that could introduce errors.",
+  "objective": "Build a publishing adapter that automates deck upload to the confirmed channel (AnkiWeb and/or GitHub Releases) with correct metadata, license display, attribution, and changelog.",
+  "acceptanceCriteria": [
+    "Implements a publishing adapter for the channel(s) confirmed in research-001 (GitHub Releases as the baseline; AnkiWeb if policy permits automation).",
+    "Attaches correct metadata, license display, attribution, and changelog to each published release.",
+    "Handles rate limits and automation restrictions identified in research-001; fails gracefully with a clear error if limits are exceeded.",
+    "Does not hardcode credentials; reads from environment variables or a secure config; never logs secrets.",
+    "Includes a dry-run mode that validates all metadata without publishing.",
+    "Includes integration tests (against a test deck) and documentation; licensed MIT."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-research-001.json"
+  ],
+  "output": "A merged PR adding a publishing adapter CLI (tools/publish/) supporting the confirmed channel(s) with dry-run mode, documentation, and integration tests; licensed MIT.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

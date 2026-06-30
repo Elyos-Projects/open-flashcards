@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-code-004",
+  "title": "Stable-GUID + non-destructive update tooling (semver + changelog)",
+  "project": "open-flashcards",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-source"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Anki's spaced repetition depends on stable card identity across deck updates. If a card's GUID changes between versions, Anki treats it as a new card, destroying the learner's scheduling history. Non-destructive update tooling ensures that GUID stability is enforced, deck versions are properly semver-bumped, and a changelog is maintained so learners and reviewers know what changed.",
+  "objective": "Build tooling that enforces deterministic, collision-free GUID derivation, validates GUID stability across deck updates, bumps semver, and appends a changelog entry on each update.",
+  "acceptanceCriteria": [
+    "Derives deterministic, collision-free GUIDs from a stable key (e.g., deck-id + note-type + stable card key); same key always produces the same GUID.",
+    "On deck update, validates that existing GUIDs are unchanged; rejects any update that would delete or change an existing GUID without an explicit deprecation flag.",
+    "Updating a deck preserves GUIDs so learners keep scheduling history; bumps semver (patch/minor/major per change type) and appends a changelog entry.",
+    "Provides a CLI command to diff two deck versions and report GUID changes, additions, and removals.",
+    "Includes unit tests and a migration guide; licensed MIT."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-code-001.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-data-001.json"
+  ],
+  "output": "A merged PR adding GUID stability and update tooling (tools/update-deck/) with semver bumping, changelog generation, and a diff command; licensed MIT.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "MIT"
+}

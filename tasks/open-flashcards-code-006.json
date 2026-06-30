@@ -1,0 +1,34 @@
+{
+  "id": "open-flashcards-code-006",
+  "title": "Media-sourcing pipeline (open image/audio license verification + attribution)",
+  "project": "open-flashcards",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "open-education-resources", "open-licensing", "open-source"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "As deck volume grows, manually verifying licenses for each image and audio file becomes a bottleneck. An automated media-sourcing pipeline that searches approved open media repositories, verifies license terms, downloads files, and generates attribution records scales the media path beyond hand-curation. This reduces reviewer burden and ensures media license compliance at the same level as text sources.",
+  "objective": "Build a media-sourcing pipeline that searches approved open image/audio repositories, verifies license terms, downloads files with provenance records, and integrates with the license-verification gate.",
+  "acceptanceCriteria": [
+    "Searches at least one approved open media repository (e.g., Wikimedia Commons) for images and/or audio matching a search term.",
+    "Verifies license terms for each candidate file; excludes files with non-open licenses per the research-002 rules.",
+    "Downloads approved files and records per-file SPDX license identifier, source URL, attribution string, and retrieval date in a provenance sidecar.",
+    "Integrates with the code-003 license-verification gate: downloaded media provenance passes the same 'unknown = excluded' check.",
+    "Generates attribution strings ready to embed in CrowdAnki JSON card fields.",
+    "Licensed MIT; includes unit tests and a README."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-research-002.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-code-003.json",
+    "https://commons.wikimedia.org/wiki/Commons:API (Wikimedia Commons API)"
+  ],
+  "output": "A merged PR adding a media-sourcing pipeline CLI (tools/source-media/) with Wikimedia Commons integration, provenance recording, and license gate integration; licensed MIT.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "MIT"
+}

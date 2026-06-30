@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-research-002",
+  "title": "Approved-source list + license-verification rules (PD/CC only)",
+  "project": "open-flashcards",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "open-licensing", "spaced-repetition"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Every card in the open-flashcards ecosystem must originate from openly-licensed source material. Without a curated approved-source list and rigorous license-verification rules, contributors risk unknowingly using copyrighted content (textbooks, proprietary question banks, copyrighted images), exposing the project to legal risk and undermining its integrity. The 'unknown = excluded' rule must be defined and operationalized before any deck authoring begins.",
+  "objective": "Produce an approved-source list covering PD, CC0, CC-BY, CC-BY-SA, OER, and official open syllabi, plus the license-verification rules that all deck tasks and the automated license gate will enforce.",
+  "acceptanceCriteria": [
+    "Produces an approved-source list (PD, CC0, CC-BY, CC-BY-SA, OER, official open syllabi) with a per-source license note and SPDX identifier.",
+    "Defines the 'unknown = excluded' rule and categorical exclusion of existing third-party decks as sources.",
+    "Specifies how share-alike (CC-BY-SA) and non-commercial (NC) terms constrain the deck's chosen output license.",
+    "Specifies separate media (image/audio) license verification with its own attribution requirements.",
+    "Document is versioned, published, and licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "https://creativecommons.org/licenses/ (CC license suite)",
+    "https://spdx.org/licenses/ (SPDX license identifiers)",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md"
+  ],
+  "output": "A versioned approved-source list and license-verification rules document (docs/approved-sources-and-license-rules.md), CC-BY-4.0, covering text and media sources, SPDX identifiers, share-alike/NC constraints, and the 'unknown = excluded' rule.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "CC-BY-4.0"
+}

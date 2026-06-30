@@ -1,0 +1,34 @@
+{
+  "id": "open-flashcards-maint-001",
+  "title": "Maintenance vs Anki / genanki / CrowdAnki format drift",
+  "project": "open-flashcards",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "open-source"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The open-flashcards build and validation tooling depends on specific versions of Anki's .apkg format, genanki, and the CrowdAnki JSON schema. These upstream formats evolve over time; format drift can silently break the build tool, linter, or compatibility with new Anki versions. Ongoing maintenance to track and adapt to format changes is necessary to keep the pipeline operational post-delivery.",
+  "objective": "Monitor Anki, genanki, and CrowdAnki format changes and update the build tool, linter, and data model schema as needed to maintain compatibility.",
+  "acceptanceCriteria": [
+    "Reviews release notes for Anki, genanki, and CrowdAnki and identifies any format changes affecting the build tool, linter, or data model.",
+    "Updates the build tool (code-001), linter (code-002), and/or data model schema (data-001) as needed to maintain compatibility with current upstream versions.",
+    "Ensures all existing decks still build and validate correctly after any format updates.",
+    "Documents the upstream version compatibility matrix (Anki version, genanki version, CrowdAnki schema version) in a COMPATIBILITY.md file.",
+    "All existing CI checks pass after the update.",
+    "Licensed MIT."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/ankitects/anki/releases (Anki release notes)",
+    "https://github.com/kerrickstaley/genanki/releases (genanki release notes)",
+    "https://github.com/Stvad/CrowdAnki/releases (CrowdAnki release notes)"
+  ],
+  "output": "A merged PR updating affected tools and/or schema for upstream format changes, with an updated COMPATIBILITY.md and passing CI.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

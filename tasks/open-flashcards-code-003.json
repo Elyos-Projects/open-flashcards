@@ -1,0 +1,34 @@
+{
+  "id": "open-flashcards-code-003",
+  "title": "License-verification gate / approved-source checker (\"unknown = excluded\")",
+  "project": "open-flashcards",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["education", "open-education-resources", "open-licensing", "open-source"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "License compliance is a hard requirement for open-flashcards. Cards sourced from non-open material expose the project to legal risk and undermine its integrity. The 'unknown = excluded' rule must be enforced automatically at CI time so no card with an unverified or non-approved source can ever be published. This gate is the automated implementation of the research-002 approved-source list and rules.",
+  "objective": "Build an automated license-verification gate that checks every card's source against the approved-source list, enforces the 'unknown = excluded' rule, flags share-alike/NC constraints, and runs as a CI check.",
+  "acceptanceCriteria": [
+    "Rejects any card whose source is not on the approved-source list or whose license is not verifiably PD/CC-* ('unknown = excluded').",
+    "Records SPDX-style license identifier, attribution string, source URL, and retrieval date per accepted card.",
+    "Flags share-alike (CC-BY-SA) or non-commercial (NC) sources that would constrain or block the deck's intended output license.",
+    "Runs as a CI check alongside the deck linter; emits an auditable report with no secrets in logs.",
+    "Approved-source list is stored as a versioned config file (approved-sources.json) that can be updated without changing tool code.",
+    "Includes unit tests; licensed MIT."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-research-002.json",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-data-001.json",
+    "https://spdx.org/licenses/"
+  ],
+  "output": "A merged PR adding a license-verification CLI tool (tools/check-licenses/) with an approved-sources config and a CI workflow integration; licensed MIT.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "MIT"
+}

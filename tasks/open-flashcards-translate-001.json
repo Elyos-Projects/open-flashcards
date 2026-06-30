@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-translate-001",
+  "title": "Multilingual / localised deck extension",
+  "project": "open-flashcards",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "open-education-resources", "spaced-repetition", "localization"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Spaced repetition is most effective when learners study in their native language. Expanding published English decks to additional languages multiplies the beneficiary reach without requiring new subject matter research or accuracy review of the underlying facts (only translation accuracy must be verified). Per-language reviewer onboarding, UTF-8/script support, and locale-specific attribution conventions must be addressed before any translation work begins.",
+  "objective": "Define the multilingual extension process and produce localised versions of at least one published deck, with per-language accuracy review and UTF-8/script support verified.",
+  "acceptanceCriteria": [
+    "Defines the translation workflow: which decks are candidates, how source text is extracted, how translated text is submitted and reviewed.",
+    "Each translated deck has a per-language reviewer who verifies translation accuracy (not just content accuracy).",
+    "UTF-8 and script support verified for all target locales (e.g., right-to-left scripts, non-Latin characters render correctly in Anki and AnkiDroid).",
+    "Attribution and license metadata updated to credit translators and note the translation relationship to the source deck.",
+    "Translated decks assigned new GUIDs distinct from the source deck to avoid scheduling conflicts.",
+    "Output decks pass all CI gates (linter, license check) and are published to the confirmed channel."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-style-001.json"
+  ],
+  "output": "Merged PR(s) containing localised CrowdAnki JSON deck files in decks/locale/ with per-language reviewer sign-off, attribution, and CI-passing validation.",
+  "requestor": "jdev1977",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

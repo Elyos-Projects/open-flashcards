@@ -1,0 +1,32 @@
+{
+  "id": "open-flashcards-doc-001",
+  "title": "Reviewer workflow: 4-dimension accuracy rubric, error taxonomy & expert-escalation checklist",
+  "project": "open-flashcards",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "open-education-resources", "spaced-repetition"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Human accuracy review is a hard gate before any deck is published. Reviewers need a standardized rubric, error taxonomy, and escalation checklist so that reviews are consistent, auditable, and efficient. Without this, review quality varies by reviewer and errors may be missed or inconsistently classified. The 4-dimension rubric (factual accuracy, completeness, clarity, attribution) provides a measurable quality bar.",
+  "objective": "Write the reviewer workflow document covering the 4-dimension accuracy rubric, error taxonomy, and the expert-escalation checklist for high-stakes content.",
+  "acceptanceCriteria": [
+    "Defines the 4-dimension accuracy rubric (e.g., factual accuracy, completeness, clarity, attribution) with a 1-4 scale per dimension and pass/fail thresholds.",
+    "Provides an error taxonomy covering at least: factual errors, incomplete/misleading answers, ambiguous prompts, missing attribution, accessibility violations, and high-stakes content without expert sign-off.",
+    "Includes an expert-escalation checklist for medical, legal, financial, safety, and high-stakes-exam content, specifying when to escalate and how to document the sign-off.",
+    "Specifies how reviewer findings are recorded (e.g., per-card review fields in the JSON or a sidecar file).",
+    "Includes onboarding guidance so a new reviewer can apply the rubric consistently after reading the document.",
+    "Published, versioned, licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/PLAN.md",
+    "https://github.com/Elyos-Projects/open-flashcards/blob/main/tasks/open-flashcards-style-001.json"
+  ],
+  "output": "A versioned reviewer workflow document (docs/reviewer-workflow.md) covering the accuracy rubric, error taxonomy, and expert-escalation checklist, CC-BY-4.0.",
+  "requestor": "jdev1977",
+  "verifiedNeed": true,
+  "outputLicense": "CC-BY-4.0"
+}
